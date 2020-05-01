@@ -201,7 +201,6 @@
                 data:{parentId:value},
                 dataType:"json",
                 success:function(result){
-                    console.log(result);
                     var status = result.status;
                     var dataTj = result.data;
 
@@ -260,6 +259,7 @@
                 var status = result.status;
                 if(200 == status){
                     var verificationCode = data.verificationCode;
+                    console.log("code is:"+verificationCode);
                     alert("你的验证码为："+verificationCode);
                 }else{
                     layer.msg("未知错误");
